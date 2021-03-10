@@ -46,4 +46,5 @@ See the docs in the personal page. https://github.com/YixiaoWang7/YixiaoWang7.gi
 
 The problem lies in the start and end of flight. The drone gets stuck at the start and in the end. The reason is that when interpolating at the start and in the end, the velocity is very small, amplifying the numerical errors which leads to more consuming time. I replaned the trajectory at the start and in the end of flight. I set that there are three constant jerk motion procedures of equal time and tried to find the minimum time.
 The result is:
+
 ![Image discription](https://github.com/YixiaoWang7/Motion_Planning_for_Drones/blob/master/time_interpolation.jpg)
