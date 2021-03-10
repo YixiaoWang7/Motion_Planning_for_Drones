@@ -12,20 +12,20 @@ B-spline: $ \bm{C}(u)=\sum_{i=0}^{n}N_{i,p}(u)\bm{P}_i, u\in[0,1]$
 Derivative of B-spline: $ \bm{C}(u)=\sum_{i=0}^{n}N'_{i,p}(u)\bm{P}_i =\sum_{i=0}^{n}M_{i,p}(u)\bm{P}_i,u\in[0,1]$  
 
 #### Least square
-![Image discription](https://github.com/YixiaoWang7/Motion_Planning_for_Drones/blob/master/path1.jpg)
+![Image discription](https://github.com/YixiaoWang7/Motion_Planning_for_Drones/blob/master/path1.jpg)   
 File: generate_control_point1.m  
 Aim: $\bm{C}(\bar{u}_k)=\bm{Q}_k, k=1,...,m$ or $\bm{N}\bm{P} = \bm{Q}$  
 Least-square: $\sum_{k=1}^{m}|\bm{Q}_k-\bm{C}(\bar{u}_k)|^2$ or $|\bm{Q}-\bm{N}\bm{P}|^2$  
 The result of least-square: $\bm{P} = (\bm{N}^T\bm{N})^{-1}(\bm{N}^T\bm{Q})$  
 #### Weighted least square with constrained derivative (both direction and norm)
-![Image discription](https://github.com/YixiaoWang7/Motion_Planning_for_Drones/blob/master/path2.jpg)
+![Image discription](https://github.com/YixiaoWang7/Motion_Planning_for_Drones/blob/master/path2.jpg)   
 File: generate_control_point2.m  
 Contraint of derivation (both direction and norm): $\bm{M}\bm{P}=\bm{T}$  
 Weight matrix: $\bm{W}$  
 Lagrangain multiplier: $\bm{R}$  
 Lagrangain function: $(\bm{Q}^T-\bm{P}^T\bm{N}^T)\bm{W}(\bm{Q}-\bm{N}\bm{P})+\bm{R}^T(\bm{M}\bm{P}-\bm{T})$  
 #### Weighted least square with constrained derivative (only direction)
-![Image discription](https://github.com/YixiaoWang7/Motion_Planning_for_Drones/blob/master/path3.jpg)
+![Image discription](https://github.com/YixiaoWang7/Motion_Planning_for_Drones/blob/master/path3.jpg)   
 File: generate_control_point3.m  
 The point is 3-dimensional. $\bm{P} = \begin{bmatrix} p_1&p_2&p_3\end{bmatrix}$.$\bm{Q} = \begin{bmatrix} q_1&q_2&q_3\end{bmatrix}$.$\bm{T} = \begin{bmatrix} t_1&t_2&t_3\end{bmatrix}$.  
 $$
